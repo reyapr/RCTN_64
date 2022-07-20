@@ -5,7 +5,7 @@ const data = require('./peserta.json')
 // const studentNames = $$('div[role="listitem"]')
 // 	.map((v, i) => v.children[0].querySelector('span').textContent)
 // 	.filter(name => name!='Renal Apriansyah')
-studentNames = [
+names = [
     "adam wahidin",
     "adi guna",
     "Ahmad Romadhon",
@@ -25,6 +25,7 @@ studentNames = [
     "Muhammad Sidiq Satyaji",
     "Septian",
     "Sonita Veronica Barus",
+    "suhaidi aming",
     "tybachri",
     "ucupcup 21",
     "vicky fernandi",
@@ -34,10 +35,10 @@ studentNames = [
     "Yasin Mochamad",
     "Yulius Susilo"
 ]
-const presents = studentNames
-.filter(name => !!data[name])
-.map(name => {
-    return data[name].code.match(/(?<=RCTN064ONL).*/)[0].replace(/0+/, '')
-})
+const presents = names
+    .filter(name => !!data[name])
+    .map(name => {
+        return data[name].code.match(/(?<=RCTN064ONL).*/)[0].replace(/0+/, '')
+    })
 const presentForm = presents.sort((a,b) => a-b).join(',')
 console.log(presentForm, `<===================  ==================`);
