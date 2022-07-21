@@ -11,6 +11,7 @@ names = [
     "Ahmad Romadhon",
     "Ali Suswanto",
     "alif ramadhan",
+    "Arief Hidayat",
     "aristya kusmanugraha",
     "Dony Dony",
     "Fadillah Maulana",
@@ -21,13 +22,10 @@ names = [
     "kenny adam",
     "Louis Gunawan S",
     "lukman hakim",
-    "M. Arief Hidayat",
     "Muhammad Sidiq Satyaji",
     "Septian",
     "Sonita Veronica Barus",
-    "suhaidi aming",
     "tybachri",
-    "ucupcup 21",
     "vicky fernandi",
     "victor as",
     "wahyu komara",
@@ -42,3 +40,4 @@ const presents = names
     })
 const presentForm = presents.sort((a,b) => a-b).join(',')
 console.log(presentForm, `<===================  ==================`);
+// 1,2,3,4,5,6,7,8,9,10,11,13,14,15,17,18,19,20,21,23,24,25,26,27,28,29,30
