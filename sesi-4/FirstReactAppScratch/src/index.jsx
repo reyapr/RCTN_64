@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import './styles.css'
 
 const App = () => {
     return (
-        <h1>Hello World</h1>
+        <h1 class="title">Hello World</h1>
     )
 }
 
