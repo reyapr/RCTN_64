@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Counter from './components/Counter';
 
 
 /**
@@ -92,11 +93,23 @@ function App() {
         <button onClick={() => changeTitle('Test Title')}>Change Title</button>
       </div>
       <hr />
-      <Content/>
+      <Counter/>
       <hr />
       <Footer/>
     </div>
   );
 }
+
+
+/**
+ * challenge 1
+ * buat counter component
+ * bisa + dan -, tapi ketika klik - saat angka 1, hasilnya ttep di 0
+ * 
+ * challenge 2
+ * 
+ * set default counternya jadi angka 1, hanya ketika awal render saja
+ * 
+ */
 
 export default App;
