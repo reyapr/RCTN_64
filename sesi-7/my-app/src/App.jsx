@@ -14,15 +14,29 @@ class App extends React.Component {
       num2: 0
     }
   }
+  
+  addCounter1 = () => {
+    this.setState({
+      num1: this.state.num1 + 1
+    })
+  }
+  
+  addCounter2 = () => {
+    this.setState({
+      num2: this.state.num2 + 1
+    })
+  } 
  
   render() {
     return (
       <div className='App'>
         <br />
-        <Counter1 num={this.state.num1}/>
+        Counter:1
+        <Counter1 num={this.state.num1} add={this.addCounter1}/>
         <br />
         <br />
-        <Counter2 num={this.state.num2}/>
+        Counter:2
+        <Counter2 num={this.state.num2} add={this.addCounter2}/>
       </div>
     );
   }
