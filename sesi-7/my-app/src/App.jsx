@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useMemo } from 'react';
 import axios from 'axios';
 import People from './components/People';
 import Counter1 from './components/Counter1';
 import Counter2 from './components/Counter2';
+import ErrorBoundary from './components/ErrorBoundary';
+import ExFunctionalComp from './components/ExFunctionalComp';
 
 class App extends React.Component {
   constructor() {
@@ -30,14 +32,24 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        {/* <br />
-        Counter:1
-        <Counter1 num={this.state.num1} add={this.addCounter1}/>
-        <br />
-        <br />
-        Counter:2
-        <Counter2 num={this.state.num2} add={this.addCounter2}/> */}
-        <People/>
+        <ErrorBoundary>
+          <br />
+          {
+            this.state.num1 > 5 ?
+            ''
+            :
+            <ExFunctionalComp num={this.state.num1} add={this.addCounter1}/>
+          }
+          <br />
+          {/* <br />
+          Counter:1
+          <Counter1 num={this.state.num1} add={this.addCounter1}/>
+          <br />
+          <br />
+          Counter:2
+          <Counter2 num={this.state.num2} add={this.addCounter2}/>
+          <People/> */}
+        </ErrorBoundary>
       </div>
     );
   }

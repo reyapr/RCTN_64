@@ -44,6 +44,7 @@ class People extends React.Component {
     const isLoading = this.state.people.length === 0
     const isPeopleDetailsEmpty = !this.state.peopleDetails
     
+   
     return (
       <div>
         <ul style={{ display: 'flex', flexDirection: 'column', alignContent: 'space-between' }}>
