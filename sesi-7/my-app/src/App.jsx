@@ -29,14 +29,15 @@ class App extends React.Component {
  
   render() {
     return (
-      <div className='App'>
-        <br />
+      <div>
+        {/* <br />
         Counter:1
         <Counter1 num={this.state.num1} add={this.addCounter1}/>
         <br />
         <br />
         Counter:2
-        <Counter2 num={this.state.num2} add={this.addCounter2}/>
+        <Counter2 num={this.state.num2} add={this.addCounter2}/> */}
+        <People/>
       </div>
     );
   }
