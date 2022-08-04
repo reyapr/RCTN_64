@@ -34,21 +34,21 @@ class App extends React.Component {
       <div>
         <ErrorBoundary>
           <br />
-          {
+          {/* {
             this.state.num1 > 5 ?
             ''
             :
             <ExFunctionalComp num={this.state.num1} add={this.addCounter1}/>
-          }
+          } */}
           <br />
-          {/* <br />
+          <br />
           Counter:1
           <Counter1 num={this.state.num1} add={this.addCounter1}/>
           <br />
           <br />
           Counter:2
           <Counter2 num={this.state.num2} add={this.addCounter2}/>
-          <People/> */}
+          <People/>
         </ErrorBoundary>
       </div>
     );

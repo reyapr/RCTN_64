@@ -3,7 +3,7 @@ import React from "react";
 
 export default class PersonDetails extends React.Component {
     componentWillUnmount() {
-        console.log( `<=================== triggered ==================`);
+        console.log( `<=================== un mount ==================`);
     }
     
     render() {

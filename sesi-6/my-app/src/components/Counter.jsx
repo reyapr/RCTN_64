@@ -5,6 +5,9 @@ const Counter = () => {
     const [num, setNum] = useState(0)
     
     
+    const increment = () => {
+        setNum(prev => prev + 1)
+    }
     const decrement = () => {
         if(num > 0) {
             setNum(prev => prev - 1)
@@ -19,7 +22,7 @@ const Counter = () => {
         <div>
             <div>{num}</div>
             <div>
-                <button onClick={() => setNum(prev => prev + 1)}>+</button>
+                <button onClick={increment}>+</button>
                 <button onClick={decrement}>-</button>
             </div>
         </div>
