@@ -1,8 +1,20 @@
-import items from "../items"
 import ItemRow from '../components/ItemRow'
 import { Outlet } from "react-router-dom"
+import { useState } from "react"
+import { useEffect } from "react"
+import axios from "axios"
 
 const Items = () => {
+    const [persons, setPersons] = useState([])
+    useEffect(() => {
+       axios.get('https://jsonplaceholder.typicode.com/users')
+        .then(({ data }) => {
+            setPersons(data)
+        })
+    }, [])
+    
+    console.log(persons, `<===================  ==================`);
+    
     return (
         <div>
             <h1>Items page</h1>
@@ -13,7 +25,7 @@ const Items = () => {
                     <th>Action</th>
                 </tr>
                 {
-                    items.map(item => {
+                    persons.map(item => {
                         return (
                             <ItemRow key={item.id} item={item} />
                         )
