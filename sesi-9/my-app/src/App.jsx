@@ -8,6 +8,8 @@ import AboutCompany from './pages/AboutCompany';
 import AboutMe from './pages/AboutMe';
 import Members from './pages/Members';
 import Member from './pages/Member';
+import Items from './pages/Items';
+import Item from './pages/item';
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
         </Route>
         <Route path='/members' element={<Members/>}>
           <Route path=':memberName' element={<Member/>}/>
+        </Route>
+        <Route path='/items' element={<Items/>}>
+          <Route path=':itemId' element={<Item/>} />
         </Route>
       </Routes>
     </div>
