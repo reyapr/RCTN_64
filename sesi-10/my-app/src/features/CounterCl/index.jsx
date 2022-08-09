@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { dynamicIncrement, increment, decrement } from "./slice"
+import { dynamicIncrementCl, decrementCl } from "./slice"
 
 class CounterCl extends React.Component {
     render() {
@@ -9,8 +9,8 @@ class CounterCl extends React.Component {
                 <h1>{this.props.title}</h1>
                 <div>{this.props.number}</div>
                 <div>
-                    <button onClick={() => this.props.dispatch(dynamicIncrement(3))}>+</button>
-                    <button onClick={() => this.props.dispatch(decrement())}>-</button>
+                    <button onClick={() => this.props.dispatch(dynamicIncrementCl(3))}>+</button>
+                    <button onClick={() => this.props.dispatch(decrementCl())}>-</button>
                 </div>
             </>
         )
@@ -18,7 +18,8 @@ class CounterCl extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    ...state
+    title: state.counterCl.title,
+    number: state.counterCl.number
 })
 
 export default connect(mapStateToProps)(CounterCl)

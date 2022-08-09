@@ -2,25 +2,25 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     number: 0,
-    title: 'Learn Redux Toolkit - Class'
+    title: 'Learn Redux Toolkit - Function'
 }
 
 const counterSlice = createSlice({
     name: 'counter',
     initialState,
     reducers: {
-        incrementCl: (state) => {
+        increment: (state) => {
             state.number += 1
         },
-        decrementCl: (state) => {
+        decrement: (state) => {
             state.number -= 1
         },
-        dynamicIncrementCl: (state, action) => {
+        dynamicIncrement: (state, action) => {
             state.number += action.payload
         }
     }
 })
 
-export const { incrementCl, decrementCl, dynamicIncrementCl } = counterSlice.actions
+export const { increment, decrement, dynamicIncrement } = counterSlice.actions
 
 export default counterSlice.reducer
