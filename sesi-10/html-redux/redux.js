@@ -8,12 +8,12 @@ const counter = (state = initialState, action) => {
         case 'INCREMENT':
             return {
                 ...state,
-                number: state.number + 1
+                number: state.number + action.num
             }
         case 'DECREMENT':
             return {
                 ...state,
-                number: state.number - 1
+                number: state.number - action.num
             }
         default:
             return state
@@ -27,11 +27,11 @@ const plusEle = document.getElementById('plus')
 const minusEle = document.getElementById('minus')
 
 plusEle.addEventListener('click', () => {
-    store.dispatch({ type: 'INCREMENT' })
+    store.dispatch({ type: 'INCREMENT', num: 1 })
 })
 
 minusEle.addEventListener('click', () => {
-    store.dispatch({ type: 'DECREMENT' })
+    store.dispatch({ type: 'DECREMENT', num: 2 })
 })
 
 numEle.innerHTML = store.getState().number
