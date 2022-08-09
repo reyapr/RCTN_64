@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from './redux/actions/counter'
+import CounterCl from './features/CounterCl';
+import { decrement, increment } from './features/CounterCl/slice';
 
 
 function App() {
@@ -17,9 +18,11 @@ function App() {
       <h1>{state.title}</h1>
       <div>{state.number}</div>
       <div>
-        <button onClick={() => dispatch(increment(2))}>+</button> {' '}
-        <button onClick={() => dispatch(decrement(1))}>-</button> 
+        <button onClick={() => dispatch(increment())}>+</button> {' '}
+        <button onClick={() => dispatch(decrement())}>-</button> 
       </div>
+      <hr />
+      <CounterCl/>
     </div>
   );
 }
