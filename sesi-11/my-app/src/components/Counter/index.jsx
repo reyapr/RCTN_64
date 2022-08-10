@@ -3,7 +3,7 @@ import { increment, decrement } from './slice'
 
 
 const Counter = () => {
-    const selector = useSelector((state) => state)
+    const selector = useSelector((state) => state.counter)
     const dispatch = useDispatch()
     
     return (
