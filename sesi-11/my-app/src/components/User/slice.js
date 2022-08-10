@@ -12,7 +12,8 @@ export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
 const initialState = {
     persons: {
         isLoading: false,
-        data: []
+        data: [],
+        error: {}
     }
 }
 
@@ -28,8 +29,11 @@ const userSlice = createSlice({
         builder.addCase(fetchUsers.pending, (state) => {
             state.persons.isLoading = true
         })
-        builder.addCase(fetchUsers.rejected, (state) => {
+        builder.addCase(fetchUsers.rejected, (state, payload) => {
             state.persons.isLoading = false
+            state.persons.error = {
+                message: payload.error.message
+            }
         })
     }
 })

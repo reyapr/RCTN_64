@@ -10,6 +10,14 @@ const User = () => {
         dispatch(fetchUsers())
     }, [])
     
+    if(persons.error.message) {
+        return (
+            <div class="alert alert-primary" role="alert">
+                Something went wrong
+            </div>
+        )
+    }
+    
     return (
         <ul>
             {
