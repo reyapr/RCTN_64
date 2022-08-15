@@ -36,6 +36,7 @@ export default function Home() {
           })
         }
       </tbody>
+      <button className='btn btn-warning'>Button</button>
     </table>
   )
 }
