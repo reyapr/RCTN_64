@@ -10,7 +10,6 @@ const User = () => {
             .then(data => setUsers(data))
     }, [])
     
-    console.log(users, `<=================== users ==================`);
     return (
         <div className="App">
             <div>
@@ -25,7 +24,7 @@ const User = () => {
             {users.map(user => {
                 return (
                     <>
-                        <div>Name: {user.name}</div>   
+                        <div role='username'>Name: {user.name}</div>   
                         <div>Email: {user.email}</div>
                         <br />
                     </>
