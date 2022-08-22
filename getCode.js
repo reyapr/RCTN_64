@@ -7,26 +7,23 @@ const data = require('./peserta.json')
 // 	.filter(name => name!='Renal Apriansyah')
 names = [
     "adam wahidin",
-    "adi guna",
     "Ahmad Romadhon",
+    "Ali Suswanto",
     "aristya kusmanugraha",
     "Dony Dony",
     "Fadillah Maulana",
     "Farid Hakim",
-    "Farid Rahmat",
     "Geoffrey Laurens",
-    "kenny adam",
     "Louis Gunawan S",
     "M. Arief Hidayat",
     "Muhammad Sidiq Satyaji",
     "Rio Kiswandaru",
     "Septian",
-    "suhaidi aming",
     "tybachri",
-    "vicky fernandi",
     "wahyu komara",
+    "Wiwit Setiyo",
     "Yasin Mochamad",
-    "Yusup Supriyadi"
+    "Yulius Susilo"
 ]
 const presents = names
     .filter(name => !!data[name])
